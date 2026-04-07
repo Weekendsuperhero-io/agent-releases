@@ -8,7 +8,27 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.11] — 2026-04-07
+
+### Added
+
+- **Remote MCP servers** — added registry support for installing and configuring remote MCP servers via HTTP/SSE transports.
+- **Agent stderr capture** — agent child process stderr is now captured during initialization and injected into connection error messages for improved diagnostics.
+- **Protocol message events** — JSON-RPC messages for initialization, session management, and authentication are now persisted as raw session events for auditing and replay.
+
+### Changed
+
+- **State management** — migrated frontend architecture from React Context to Zustand stores for themes, tabs, notifications, and settings to improve performance and code organization.
+- **Windows CI performance** — expanded Windows Defender exclusions to cover Node.js, pnpm, and compiler processes for faster builds.
+- **Release build profile** — changed link-time optimization (LTO) from full to thin to reduce compilation times.
+- **Chat transcript retention** — updated the settings UI to provide a dropdown with common presets (10 days, 1 month, 1 year, forever) alongside custom day input.
+
+### Fixed
+
+- **Registry entry resolution** — entries not found in the local cache now trigger a fresh registry fetch or targeted search to correctly resolve remote-only servers.
 
 ## [0.3.10] — 2026-04-06
 
@@ -169,7 +189,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.10...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.11...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
