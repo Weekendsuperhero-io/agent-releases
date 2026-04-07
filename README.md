@@ -9,7 +9,34 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.12] — 2026-04-07
+
+### Added
+
+- **OAuth pre-registration** — added support for configuring pre-registered OAuth apps (e.g. GitHub) via a new Client ID field in MCP server settings.
+- **Registry install progress** — added real-time progress bars to the registry browser during agent and server installations.
+- **Secrets metadata tracking** — added a database table to track metadata, owner relationships, and expiration dates for all credentials stored in the OS keyring.
+- **Combined logging** — introduced a unified `combined.log` file that captures all chronological logging output to simplify debugging.
+
+### Changed
+
+- **Keyring backend** — replaced `secret-lib` with `keyring-core` backed by platform-specific native stores (macOS Keychain, Windows Credential Manager, Linux Secret Service).
+- **Keyring namespace** — updated the keyring service name to use the app bundle identifier, and added an automatic migration for legacy secrets on startup.
+- **MCP settings UI** — redesigned the server list into a grid of cards with inline transport badges, update buttons, and clear OAuth authorization states.
+- **Agent settings UI** — agent cards now display their configured default task instead of a generic description, and the entire card is clickable.
+- **macOS runtime permissions** — quarantine xattrs on downloaded runtimes are now stripped in-process via `libc::removexattr` to prevent App Sandbox subprocess denials.
+- **Unix shebang resolution** — scripts spawned on Unix now explicitly resolve their shebang interpreter against the injected PATH to ensure isolated runtimes are used.
+- **Skill directory access** — security-scoped bookmark resolution for custom skill directories is now handled centrally in the backend during discovery.
+
+### Fixed
+
+- **OAuth 401 handling** — HTTP backends returning 401 Unauthorized now correctly prompt for OAuth authorization instead of recording generic connection failures.
+- **Gateway synchronization** — the MCP gateway now automatically reloads backends immediately after a successful OAuth token exchange.
+- **Redundant installations** — registry installations are now skipped if the requested version is already installed locally.
+- **Registry errors** — registry browser error messages can now be manually dismissed and will automatically clear after 5 seconds.
 
 ## [0.3.11] — 2026-04-07
 
@@ -189,7 +216,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.11...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.12...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
