@@ -10,7 +10,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.13] — 2026-04-08
+
+### Changed
+
+- **ACP client state** — centralized configuration, connection probing, and session fetching into Zustand stores to simplify component architecture and state management.
+- **MCP server state** — moved computation of installed registry metadata into the Zustand store to improve performance and code organization.
+- **Agent runtime resolution** — migrated injection of bootstrapped registry paths to the Rust backend during capability probing and session fetching to ensure isolated runtimes are used.
+
+### Fixed
+
+- **NPX package installations** — fixed registry installation failures for scoped packages by properly stripping existing version suffixes before applying the pinned version.
 
 ## [0.3.12] — 2026-04-07
 
@@ -216,7 +229,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.12...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.13...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
