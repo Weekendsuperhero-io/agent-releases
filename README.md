@@ -11,7 +11,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.14] — 2026-04-08
+
+### Added
+
+- **Runtime tracking** — added a `runtimes` database table to definitively track installed Node.js and uv paths, using `walkdir` to discover exact executable locations post-download.
+- **In-app release notes** — added a UI section to display patch notes directly in the settings panel when an application update is available.
+
+### Changed
+
+- **ACP runtime resolution** — updated runtime path injection for registry-installed agents to securely resolve locations from the new `runtimes` database table instead of client metadata.
+- **CI infrastructure** — migrated GitHub Actions workflows to use custom Warp runners and caching to improve build and test performance across all platforms.
+- **Release pipelines** — updated the release pipeline to capture dynamically generated release notes and include them in the update payload.
+- **Startup video loading** — simplified the intro video player to load assets directly via Vite instead of fetching and constructing blob URLs.
+- **Automated signatures** — updated PR descriptions and changelog generation scripts to use current product branding.
 
 ## [0.3.13] — 2026-04-08
 
@@ -229,7 +245,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.13...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.14...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
