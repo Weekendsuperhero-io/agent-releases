@@ -12,7 +12,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.15] — 2026-04-09
+
+### Changed
+
+- **CI infrastructure** — updated GitHub Actions workflows to skip linting and validation jobs for release and documentation commits.
+
+### Fixed
+
+- **Agent installations** — migrated registry installations from `npx` to `npm install -g` with a custom `.npmrc` to isolate cache and global operations within the app data directory, preventing macOS App Sandbox denials.
+- **Auth terminals** — injected runtime execution paths into terminal sessions to ensure registry-installed agents can resolve bundled dependencies like Node.js during authentication flows.
 
 ## [0.3.14] — 2026-04-08
 
@@ -245,7 +257,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.14...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.15...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
