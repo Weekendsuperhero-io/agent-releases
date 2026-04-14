@@ -13,7 +13,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.16] — 2026-04-14
+
+### Added
+
+- **Agent schema** — added a `maintenance_jobs` table for a durable background work queue and a `v_all_agents` view to unify execution paths.
+- **Toolchain management** — added `toolchain_installations` to manage Node.js and uv downloads, and implemented robust `HOME` directory resolution and tilde expansion for agents.
+- **Environment configuration** — added `global_env` and `global_paths` repositories to support global environment variables and a PATH editor.
+
+### Changed
+
+- **Agent database** — replaced legacy `acp_clients` by splitting agents into `local_agents` and `registry_agents`, bumped schema to v25, and migrated session tables to `events.db`.
+- **OAuth authentication** — updated the MCP gateway to resolve OAuth metadata secrets from the OS keyring and updated secret tracking to link to local and registry agents.
 
 ## [0.3.15] — 2026-04-09
 
@@ -257,7 +271,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.15...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.16...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
