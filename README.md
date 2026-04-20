@@ -14,7 +14,28 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.17] — 2026-04-20
+
+### Added
+
+- **MCP variant-aware install** — registry MCP entries that ship multiple `(source, transport)` variants (npm-stdio, pypi-stdio, remote-streamable-http, remote-sse) now expose a picker dialog. Single-variant entries install directly. Reinstalling with a different variant transparently uninstalls the old one and surfaces a "Replacing X with Y" progress message. The chosen variant is stored on `registry_mcps.installed_variant`. (PR 8)
+- **MCP icon fetch + safety** — install-time SVG icon download with 64 KB cap, content-type checks, and a safety scan rejecting `<script>`, `on*=` event handlers, and `javascript:` URIs. Frontend `MCPIcon` component renders monochrome SVGs via CSS `mask-image` so they tint with the active theme; non-mono SVGs and raster icons render as `<img>`. (PR 8 commit 4)
+- **MCP startup variant backfill** — `reconcile_installed_variants` runs at app launch alongside `refresh_installed_mcps_from_registry` and fills `installed_variant` for legacy v26 rows by mapping each row's stored `transport` to a matching variant in the live registry. (PR 8 commit 6)
+- **`installed_variant` column** — new `registry_mcps.installed_variant TEXT` (v27 → v28 additive migration). (PR 8 commit 2)
+- **Cursor-paginated MCP registry fetch** — `fetch_mcp_registry_paginated` walks every page (capped at 50 for safety) and caches the snapshot to `<data>/registry/mcp-registry-v2.json` with a 1-hour TTL. Search queries bypass the cache. (PR 8 commit 3)
+
+### Changed
+
+- **Spawn env contract** — the `_extra_paths` magic env key has been removed. `AgentACPClient::probe_agent` / `list_agent_sessions` / `start_acp_session` and `spawn_auth_terminal` now take a typed `extra_paths: Vec<PathBuf>` parameter resolved by `app_api::env::resolve_agent_env`. The `ResolvedEnv { vars, path_layers, source_trace }` surface is the authoritative shape for env + PATH at spawn time. The deprecated `prepare_agent_env`, `build_agent_env`, and `inject_toolchain_and_global_paths` wrappers in `app-api/src/acp.rs` are deleted. (PR 7.6)
+- **Binary / system runtime install isolation** — each binary or system registry agent now has its own `runtime_installations` row keyed on `(runtime_id, os, arch, bin_dir)` instead of collapsing onto a singleton per `(runtime_id, os, arch)`. Resolves a class of bugs where multiple binary agents shared whichever `bin_dir` was installed last (e.g. a stakpak install masking codex-acp's PATH). The v26 → v27 migration splits any pre-existing collapsed rows. (PR 7.5)
+
+### Fixed
+
+- **MCP `_extra_paths` legacy read** — `resolve_mcp_env` no longer consumes the legacy `_extra_paths` JSON key from `McpServerConfig.env`. It now reads typed `runtime_installations.bin_dir` rows directly. Latent legacy MCP rows that still carry the key silently lose it (those installs were already broken; reinstall via the variant picker). (PR 7.6)
+- **MCP variant reconcile pagination cap** — `reconcile_installed_variants_at_startup` no longer fetches the full paginated MCP registry just to backfill a few rows. The live MCP registry now exceeds 3000 entries (50 pages × 60 / page), tripping the safety cap and aborting reconcile. The reconciler now runs a focused name search (`?search={name}&limit=60`) per `installed_variant IS NULL` row via the new `find_mcp_entry_by_name` helper. O(installed MCPs) HTTP calls instead of O(registry size / 60). Snapshot-based unit-test path (`reconcile_installed_variants(pool, &snapshot)`) is preserved for testability.
 
 ## [0.3.16] — 2026-04-14
 
@@ -271,7 +292,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.16...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.17...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
