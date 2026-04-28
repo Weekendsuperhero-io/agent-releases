@@ -16,7 +16,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.19] — 2026-04-28
+
+### Fixed
+
+- **Session overrides** — fixes a missing session list error by creating the `session_overrides` table and update trigger, and correcting the column count in the session repository insert statement. (PR 120)
+- **Storage UI** — fixes a bug where SQL view expressions evaluated to `null` by updating `sqlite_row_to_json` to use the cell runtime type. (PR 120)
+- **Project paths** — prevents unhandled promise rejections on failure by adding explicit error handling when opening project paths. (PR 120)
 
 ## [0.3.18] — 2026-04-28
 
@@ -308,7 +317,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.18...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.19...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
