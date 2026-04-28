@@ -15,7 +15,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.18] — 2026-04-28
+
+### Added
+
+- **Inherited environment UI** — surfaces full `inherited_env` in `EffectiveAgentEnv` to show exactly what is inherited from the parent process, adds visual indicators in the `EffectiveEnvPreview` component, and automatically displays the resolved environment preview after a successful connection test. (PR 118)
+
+### Changed
+
+- **Agent containment directories** — replaces `HOME` and `USERPROFILE` overriding with XDG base directories for registry agent containment. Preserves the real user home in `HOME` for compatibility with native tooling, while injecting `XDG_CONFIG_HOME`, `XDG_CACHE_HOME`, `XDG_DATA_HOME`, and `XDG_STATE_HOME` routed to the per-agent isolation root. (PR 118)
+- **Dependencies** — bumps `keyring-core` and platform-specific `keyring-store` crates to 1.0, and bumps `adk-skill` from 0.6.0 to 0.7.0. (PR 118)
+
+### Fixed
+
+- **Draft environment variables** — fixes a frontend bug where newly added draft environment variables vanish when saving by changing `saveClient` to use an optimistic in-memory merge to prevent blank rows from being lost during persistence layer filtering. (PR 118)
 
 ## [0.3.17] — 2026-04-20
 
@@ -292,7 +308,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.17...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.18...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
