@@ -17,7 +17,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.3.20] — 2026-05-28
+
+### Fixed
+
+- **Resumed-session event loss** — fixes silent data loss across app restarts by lazily seeding the `TauriSink` sequence counter from persisted history instead of resetting to `0`, extracting write logic to a testable `BufferWriter`, and adding collision diagnostic logging. (PR 138)
+
+### Added
+
+- **`governance_enabled` column** — adds `agent_md.governance_enabled INTEGER` (v28 → v29 additive migration) to prepare for future governance capabilities. (PR 122)
 
 ## [0.3.19] — 2026-04-28
 
@@ -317,7 +328,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.19...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.20...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
