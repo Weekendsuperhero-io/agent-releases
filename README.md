@@ -18,7 +18,42 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
+
 ## [Unreleased]
+
+## [0.3.22] — 2026-05-30
+
+### Fixed
+
+- **macOS release bundle** — fixes a release bundle failure where Tauri incorrectly tried to copy `smoke_launch` into `Agent.app` by moving `smoke_launch.rs` from `src/bin/` to `examples/`. (PR 164)
+
+## [0.3.21] — 2026-05-30
+
+### Added
+
+- **Gateway persistence** — adds `mcp_gateway_tokens` and `mcp_gateway_sessions` for restart-resilient MCP routing to allow sessions to survive app restarts. (PR 139)
+- **Tool scoping** — adds `allowed_tags` to policy assignments and an "Allowed groups" tag picker to settings for granular tool restrictions. (PR 139)
+- **Isolated logging** — adds `per_backend_logging.rs` for isolated per-backend MCP logs. (PR 139)
+- **Global PATH inheritance** — adds a tri-state "Inherit global PATH" control to settings. (PR 139)
+- **Smoke tests** — adds a headless `smoke_launch.rs` binary to CI to catch init, DB migration, and keychain regressions. (PR 139)
+
+### Changed
+
+- **Filesystem sandbox** — refactors `acp-fs::Sandbox` to support secondary read-only grants alongside the project directory. (PR 139)
+- **Shell execution bridging** — rewrites `bridge_shell_command` with `shlex::split` to preserve bash features and handle packed commands natively. (PR 139)
+- **Registry pagination** — migrates MCP registry fetching to use lazy-loaded pagination with an `IntersectionObserver`. (PR 139)
+- **Agent icons** — updates the agent SVG icons to handle dynamic themes (`color`, `duotone`, `lineart`, `silhouette`). (PR 139)
+
+### Fixed
+
+- **Tauri Sink collisions** — prevents sequence collisions by adding a background ticker and history rebasing (`append_with_seed_rebase`). (PR 139)
+- **Agent save errors** — resolves persistence errors on save by splitting the local agent DTO into `LocalAgentRead` and `LocalAgentWrite`. (PR 139)
+- **Database migrations** — re-sequences and verifies migrations to fix a `v3→v4` issue and the `v28→v32` chain. (PR 139)
+
+### Security
+
+- **OAuth secrets** — migrates OAuth `client_secret` to the OS keyring and updates the `secrets` schema to separate local/registry MCP foreign keys. (PR 139)
 
 ## [0.3.20] — 2026-05-28
 
@@ -328,7 +363,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.20...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.22...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
