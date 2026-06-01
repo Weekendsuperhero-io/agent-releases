@@ -1,3 +1,7 @@
+---
+created: 2026-05-30T13:39
+updated: 2026-05-30T13:39
+---
 # Changelog
 
 All notable changes to Agent are documented here. Each release section can be used directly as release notes.
@@ -20,7 +24,32 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.4.0] — 2026-06-01
+
+### Added
+
+- **Sidebar destinations** — adds registry-driven top-level sidebar destinations for Gateway, Tools, and Skills, moving these surfaces out of Settings into dedicated pages. (PR 168)
+- **Composer ordering** — adds drag-to-reorder for Composer cards with persistence to the `composer_order` app setting. (PR 168)
+- **Gateway connect timeout setting** — adds `mcp_connect_timeout` to network settings and wires it into MCP gateway connection behavior. (PR 168)
+
+### Changed
+
+- **Bump workflow** — optimizes the bump workflow with a shared toolchain and caching to prevent recompiling the dependency graph, and migrates to the `warp-ubuntu-latest-x64-4x` runner for cache compatibility. (PR 166)
+- **Composer home experience** — replaces the ACP Clients view with a responsive Composer grid in non-advanced mode and renames "Clients" to "Composer". (PR 168)
+- **Settings composition** — refactors Settings into reusable `TabBar`, `ToggleRow`, and `SettingField` components, and moves Mail Accounts and Custom MCP Servers configuration into Tools. (PR 168)
+- **ACP handshake timeouts** — standardizes `protocol_init` and `session_new` timeouts to 60 seconds. (PR 168)
+
+### Fixed
+
+- **WebKit segmented control height** — fixes a phantom-height layout issue in the Agents segmented control. (PR 168)
+- **Type bindings import** — fixes `acpClientPersistence.ts` to use `LocalAgentRead` for generated bindings compatibility. (PR 168)
+
+### Security
+
+- **macOS personal-information entitlements** — adds calendar, reminders, and location entitlements for Hardened Runtime TCC permission prompts across Developer ID and App Store builds. (PR 168)
 
 ## [0.3.22] — 2026-05-30
 
@@ -363,7 +392,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.22...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.4.0...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
