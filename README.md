@@ -25,7 +25,32 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.5.0] — 2026-06-10
+
+### Added
+
+- **Subagent architecture** — adds `spawn_subagent` task-mode support, keepalive heartbeats, and progressive disclosure for config options. (PR 169)
+- **Subagent muses** — enhances Muses with `useAsSubagent` toggle and default configs. (PR 169)
+- **Composer and session recovery** — adds Settings UI for re-assigning orphaned sessions to new composers, locating missing local composer binaries, and batch recovery for relocated session project folders. (PR 169)
+- **Telemetry and diagnostics** — introduces `logs.db` with an interactive Log Viewer to capture frontend crashes, unhandled rejections, and raw MCP stderr. (PR 169)
+
+### Changed
+
+- **In-process MCP servers** — wraps in-process MCP servers with an auto-reconnect supervisor. (PR 169)
+- **Wire transcript recorder** — updates wire transcript recorder to preserve handshakes and drop redundant replays. (PR 169)
+
+### Fixed
+
+- **Tool access inheritance** — fixes tool access inheritance for subagents. (PR 169)
+- **Session restore pipeline** — fixes `AGENT_NOT_AVAILABLE` and `PROJECT_DIR_MISSING` crash loops during restore by resolving identities directly from the database and fixing cyclic JSON crashes. (PR 169)
+- **Windows CI paths** — fixes Windows CI test paths. (PR 169)
+
+### Security
+
+- **macOS App Store releases** — removes invalid `reminders` macOS entitlement blocking App Store releases. (PR 169)
 
 ## [0.4.0] — 2026-06-01
 
@@ -392,7 +417,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.0...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
