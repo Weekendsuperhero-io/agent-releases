@@ -26,7 +26,34 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.5.1] — 2026-06-16
+
+### Added
+
+- **MCP Inspector tab** — adds a dedicated tab with a UI for exploring resources, templates, and completions.
+- **Gateway Facts card** — details built-in tools and advertised protocol methods, exposing a synthesized `tool://` catalog.
+- **MCP Apps host** — enables inline rendering of `mcp-ui` widgets in strictly sandboxed iframes with theme-aware styling.
+- **Subagent transcript dialog** — adds a dialog to view running or completed child transcripts.
+- **Elicitation support** — integrates the `ask_user` tool, allowing backend servers to pause tool calls and prompt for interactive input from the user.
+- **Widget data persistence** — adds widget data to the audit log to enable hydration on session restore.
+
+### Changed
+
+- **OAuth flow** — refactors authorization to use an introspection-first UI.
+- **Agent protocol capabilities** — de-advertises `resources`, `templates`, and `completions` from agents, exposing them exclusively to the harness.
+- **Subagent autonomy** — transitions `spawn_subagent` to `subagent` and introduces `subagent_settings` for supervised vs. auto policies.
+- **Database schemas** — advances database schemas and migrates MCP governance to use immutable backend slugs instead of display names.
+
+### Fixed
+
+- **OAuth connectivity** — fixes a missing User-Agent header causing 403 errors, registers exact redirect URIs, and unifies secret keying to correctly persist client secrets for token refresh.
+
+### Removed
+
+- **Legacy session tables** — drops legacy session tables in the application database.
 
 ## [0.5.0] — 2026-06-10
 
@@ -417,7 +444,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.1...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
