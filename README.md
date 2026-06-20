@@ -27,7 +27,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.5.2] — 2026-06-20
+
+### Added
+
+- **Skills repository** — adds an in-app interface to browse, install, and audit skills from skills.sh and GitHub.
+
+### Changed
+
+- **Tab restoration** — hardens tab hydration on reboot and adds boot logging to prevent a single failed session from blocking initialization.
+
+### Fixed
+
+- **Duplicate tabs** — deduplicates tabs by session ID to fix an issue where opening the same live session created duplicate tabs.
+- **Wire transcripts** — guarantees `session/load` handshake frames are captured to bypass lossy broadcast drops and improve reliability.
 
 ## [0.5.1] — 2026-06-16
 
@@ -444,7 +460,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.2...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
