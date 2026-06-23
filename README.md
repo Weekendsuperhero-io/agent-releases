@@ -28,7 +28,31 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.5.3] — 2026-06-23
+
+### Added
+
+- **Subagents** — introduces standalone subagents as a first-class entity with complete UI and backend wiring.
+- **MCP task cards** — implements universal inline cards bound to tool bubbles for tracking background tasks like subagent spawns.
+- **Multi-select elicitations** — adds multi-select checkbox support to the `ask_user` tool schema and frontend forms.
+- **Built-in Muse gateway** — surfaces a built-in Muse card in the Gateway Status UI to display native tools and protocol methods.
+- **Skills audit pills** — adds security audit pills and external repository links to the Skills UI.
+- **In-place skill updates** — adds an update button to fetch and install managed skill updates directly from the UI.
+
+### Changed
+
+- **Elicitation proxying** — routes `ask_user` prompts to the parent chat across all subagent modes to decouple autonomy from elicitations.
+
+### Fixed
+
+- **ACP extension crashes** — returns `method_not_found` instead of `null` for unknown extension methods to prevent crashes.
+- **macOS binary crashes** — implements code-signature repair to resolve AMFI SIGKILL vulnerabilities by cleanly re-extracting native binaries.
+- **Launch symlink crashes** — bypasses `npx` to launch installed entries directly via node, preventing `EEXIST` symlink loop crashes on version bumps.
+- **Tab restoration** — fixes a bug that dropped active ACP sessions and missing scope fields on reload.
+- **Font clipping** — adjusts line-height to fix cursive font clipping on Muses cards and sidebar tabs.
 
 ## [0.5.2] — 2026-06-20
 
@@ -460,7 +484,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.2...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.3...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
