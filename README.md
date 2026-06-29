@@ -29,7 +29,26 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 
 
+
 ## [Unreleased]
+
+## [0.6.0] — 2026-06-29
+
+### Added
+
+- **Glass UI system** — refactors the frontend UI to use a new glass design system with advanced wallpaper modes and dynamic text contrast adjustments.
+- **Pasted text handling** — processes large pasted-text blocks as distinct embedded resources and renders them as collapsed chips.
+- **Chat cards** — builds specialized tool cards for rendering ask user, fetch, search, and subagent tools.
+- **Image viewing components** — adds lightbox, view, and grid components to display images.
+- **Message tracking** — adds wire message count tracking to the session repository.
+
+### Changed
+
+- **Dependencies** — pins `rmcp` and `rmcp-macros` to version 1.7.0.
+
+### Fixed
+
+- **Shutdown warnings** — suppresses expected agent stderr death-rattles during shutdown.
 
 ## [0.5.3] — 2026-06-23
 
@@ -484,7 +503,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ---
 
-[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.5.3...HEAD
+[Unreleased]: https://github.com/Weekendsuperhero-io/agent/compare/v0.6.0...HEAD
 [0.3.8]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.7...v0.3.8
 [0.3.7]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Weekendsuperhero-io/agent/compare/v0.3.4...v0.3.6
