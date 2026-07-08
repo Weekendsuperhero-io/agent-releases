@@ -1,0 +1,23 @@
+{
+  "version": "0.6.0",
+  "notes": "\n### Added\n\n- **Glass UI system** \u2014 refactors the frontend UI to use a new glass design system with advanced wallpaper modes and dynamic text contrast adjustments.\n- **Pasted text handling** \u2014 processes large pasted-text blocks as distinct embedded resources and renders them as collapsed chips.\n- **Chat cards** \u2014 builds specialized tool cards for rendering ask user, fetch, search, and subagent tools.\n- **Image viewing components** \u2014 adds lightbox, view, and grid components to display images.\n- **Message tracking** \u2014 adds wire message count tracking to the session repository.\n\n### Changed\n\n- **Dependencies** \u2014 pins `rmcp` and `rmcp-macros` to version 1.7.0.\n\n### Fixed\n\n- **Shutdown warnings** \u2014 suppresses expected agent stderr death-rattles during shutdown.",
+  "pub_date": "2026-06-29T20:47:37Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaVpCQzRvY1pLMHFtNGhCZ1JiZXpRazJkOUJSNUJ4RkMrdGNuZWhYTGF6UVhEN1d5Tm13cFQxRStmZ0QvNFF6a1VoK2tka2FZZTlLak9xdGMzSUFsWHJPR0pDRjZVbWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNzY1MjQ1CWZpbGU6QWdlbnQuYXBwLnRhci5negpYQ1lhMDVhREJ0Rk0wM0lIemNuNGEyZnRhRHZPeW9sNHFIb0xSbS9BdkdwS2tURE9RZkI1TUhXQ01WWVBHSTdJemtsQnpLVzdVR3UrNXRvUWdZRWNBUT09Cg==",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.6.0/Agent.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaVpCQzRvY1pLMHFtNGhCZ1JiZXpRazJkOUJSNUJ4RkMrdGNuZWhYTGF6UVhEN1d5Tm13cFQxRStmZ0QvNFF6a1VoK2tka2FZZTlLak9xdGMzSUFsWHJPR0pDRjZVbWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNzY1MjQ1CWZpbGU6QWdlbnQuYXBwLnRhci5negpYQ1lhMDVhREJ0Rk0wM0lIemNuNGEyZnRhRHZPeW9sNHFIb0xSbS9BdkdwS2tURE9RZkI1TUhXQ01WWVBHSTdJemtsQnpLVzdVR3UrNXRvUWdZRWNBUT09Cg==",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.6.0/Agent.app.tar.gz"
+    },
+    "windows-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaVpCQzRvY1pLMGd4MG1XNEJQTitUQzF0aWsySzUwemxMRUl6Vmx1NzRoaTRJdjlmN2ZzSXlQK0trbHlVblgzV3RtUUNLQ2pvSWlqam4vM241Z1Z5VkV2T1Q2Mmd2TWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNzY1ODkxCWZpbGU6QWdlbnRfMC42LjBfYXJtNjQtc2V0dXAuZXhlCk8vaFZJVFBhRjdqTHFPSHNPWCtkL3FDek1UV1dvaHVtVXBoVXY1TXQ2L1lTczBlRElvUlQ5bFE3ZWhjakE2elRpK3ptVzhDN09DdThyQjI4ekRjNERnPT0K",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.6.0/Agent_0.6.0_arm64-setup.exe"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaVpCQzRvY1pLMG94QTlwQkZBN28wU2Y5Smx4T3VGVmJLVDhielBjMlRPYWFRVHBXNG1wMXZuTmg4RXF3c3BGK3V6M3k4VlVYVFNIQmRFcjBwejNZZGlXWnh0MWJUeWdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyNzY1ODE1CWZpbGU6QWdlbnRfMC42LjBfeDY0LXNldHVwLmV4ZQpaVm1jcVJQbkpha3NRUEh5RUFUT0p1eUptUEtsNEtGMEFxZkdVYmNuWlRLcTZmbDkzMHIyNStwZlNpUGNyZDV2aWp1OFlLM21MUldsaTUwUXdmUDRBUT09Cg==",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.6.0/Agent_0.6.0_x64-setup.exe"
+    }
+  }
+}
