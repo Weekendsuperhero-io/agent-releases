@@ -32,6 +32,44 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Added
+
+- **Zero-install networking** — ships a built-in secure networking node for macOS, eliminating the need to install a separate system client.
+- **Tailscale sign-in** — displays an interactive login button in Settings instead of stalling, and securely provisions the desktop using pasted single-use API keys.
+- **Remote access settings** — adds a "Far From Home" tab to view private link status, manage paired mobile devices, and track presence directly from the desktop.
+- **Stable download links** — introduces persistent download links for each release channel that always point to the latest version.
+- **Window controls** — replaces custom macOS window buttons with native traffic lights and makes the entire top edge draggable.
+- **Terminal styling** — renders ANSI color sequences correctly in chat terminal outputs for both light and dark modes.
+- **Display settings** — adds animated pattern backgrounds, wallpapers, and customizable glass aesthetics like diffusion and lightness.
+- **Desktop identity** — allows editing the desktop's display name directly in Settings, instantly syncing to connected mobile devices.
+- **Mobile background sync** — allows the iOS app to silently check for pending approvals without opening the application.
+- **Interactive prompts** — adds experimental support for inline user prompts and subagent spawns directly within the chat transcript.
+- **Session status bubbles** — displays non-intrusive timeline indicators when a chat session starts, resumes, or is canceled.
+- **Network toggle** — allows starting and stopping the remote access connection dynamically from Settings without relaunching the app.
+
+### Changed
+
+- **App updates** — significantly improves in-app update download speeds, keeps the UI responsive, and adds an "Update All" button for registry extensions.
+- **Design system** — updates the interface to a new material design system with an Amethyst crystal theme, tonal gloss, and moonrise wallpaper by default.
+- **Chat UI** — unifies tool cards with harmonic tinted glass, removes duplicate terminal commands from the output, and applies specific color accents to different types of tools.
+- **App icon** — updates the application icon with refined colors and new day/night figures for macOS and iOS.
+- **Windows UI** — uses opaque window surfaces for improved compatibility and moves window controls to the standard top-right position.
+- **Session configuration** — simplifies the interface by replacing legacy mode and model selectors with a unified settings picker.
+- **Prompt cancellation** — clicking the stop button now surgically interrupts the current request instead of ending the entire session.
+- **Sign out** — signing out now cleanly disconnects the network, forgets paired devices, and resets the connection history.
+- **Mobile typography** — updates the iOS app with a New York serif font toggle for message replies and a warmer visual style.
+
+### Fixed
+
+- **Device pairing** — recovers pending phone pairing prompts automatically if the app reloads or restarts.
+- **Mobile connection** — makes the iOS app connection more reliable with self-healing networks, accurate background status reporting, and a one-tap restart button for crashed sessions.
+- **Window positioning** — prevents the application window from restoring off-screen after changing monitors.
+- **Video playback errors** — translates unhelpful video error messages to standard codes during the startup intro.
+
+### Removed
+
+- **Fluted glass** — removes the fluted glass interface style across the application.
+
 ## [0.6.0] — 2026-06-29
 
 ### Added
