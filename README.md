@@ -34,6 +34,27 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Environment variables** — introduces a unified system to view, edit, and securely lock environment variables across all system scopes.
+- **Launch arguments** — allows appending custom startup arguments to any integration and clearly displays the base requirements.
+- **System paths** — allows syncing command-line paths from the local shell so custom tools are available to agents.
+
+### Changed
+
+- **Interactive prompts** — waits indefinitely for your reply by default instead of silently cancelling unanswered questions after a timeout.
+- **Interface styling** — applies new diffused glass effects, widens dialog boxes, and refines scrollbars, dropdowns, and sidebar contrast.
+
+### Fixed
+
+- **Configuration settings** — fixes issues where unlocking secure values or saving empty variables could inadvertently delete them entirely.
+- **Device pairing** — prevents the application from incorrectly showing a new pairing prompt when internal storage is temporarily busy.
+- **Registry integrations** — ensures that installed integrations correctly receive all required startup parameters, automatically healing broken installations.
+
+### Security
+
+- **Secret storage** — securely scrubs credentials from the system keychain when an integration is deleted, resolving a potential credentials leak.
+
+### Added
+
 - **Zero-install networking** — ships a built-in secure networking node for macOS, eliminating the need to install a separate system client.
 - **Tailscale sign-in** — displays an interactive login button in Settings instead of stalling, and securely provisions the desktop using pasted single-use API keys.
 - **Remote access settings** — adds a "Far From Home" tab to view private link status, manage paired mobile devices, and track presence directly from the desktop.
