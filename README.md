@@ -34,6 +34,25 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Mobile skills** — introduces a right-edge slide-over panel on iOS for managing skills with full drag-and-drop support.
+
+### Changed
+
+- **Mobile forms** — updates iOS input forms to fully support all field types and bring them to parity with the desktop app.
+- **Mobile interactions** — makes response text globally selectable and displays dictation errors directly inline.
+- **Session presence** — unifies active session indicators across desktop and mobile, displaying a single corner dot on session icons.
+
+### Fixed
+
+- **Connection status** — updates the mobile connection screen padlock to accurately reflect live network socket states.
+- **Network connectivity** — resolves wake-from-sleep connectivity issues to ensure reliable reconnections for paired devices.
+
+### Security
+
+- **Link security** — prevents the execution of malicious web links by restricting interactive URLs strictly to secure web protocols.
+
+### Added
+
 - **Environment variables** — introduces a unified system to view, edit, and securely lock environment variables across all system scopes.
 - **Launch arguments** — allows appending custom startup arguments to any integration and clearly displays the base requirements.
 - **System paths** — allows syncing command-line paths from the local shell so custom tools are available to agents.
