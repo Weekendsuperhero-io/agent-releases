@@ -1,23 +1,23 @@
 {
-  "version": "0.7.0-beta.11",
-  "notes": "Release v0.7.0-beta.11",
-  "pub_date": "2026-07-17T08:48:59Z",
+  "version": "0.7.0-beta.12",
+  "notes": "Release v0.7.0-beta.12",
+  "pub_date": "2026-07-22T05:40:54Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3gxQU1XNHNLa0JNZnp2OUM1Y0d1OVNsUVkzeFlPU21ydVVFSVVkOVFxVjlEdE03Q3kyNGRHcm5Jb0s3a3JkTDlOdVVBa3NiY0RrMEdTSUYxZm5lWGd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Mjc4MDQwCWZpbGU6QWdlbnQgQmV0YS5hcHAudGFyLmd6Cnp5TUxTOFZVZDZic3ZURFNWQU9CRlBLMlozdlJWNCtiOExKRDdtbjNkZitUZnNLakFrblhiSEh3ZE8xcWNJNlZudDJzMVdBZ0g0NjFlNnBKZUV2NkFRPT0K",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.11/Agent-Beta.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3p6UHdYUjZJcnBXdzNwRjVSRkZCbUw5NXl0bDI2Q01PY1FYditRQTdDS2ZDYzI2U2Z0b3NEV2ZodjZzWFZZNjM0VU5pN251Q3graGFCdjR1dTZsU3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Njk3OTU0CWZpbGU6QWdlbnQgQmV0YS5hcHAudGFyLmd6CkR5RDhUSW5VczdXTU5iZC9jWGthSHJSa2Q5UXNuZE1KakdOZE95SGRqMmkzeDlrRmJ0Qk0zWjlabVVrTVU0dWM2K2JLMUdWMkZqL1ZaVUZSbUsxaEJ3PT0K",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.12/Agent-Beta.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3gxQU1XNHNLa0JNZnp2OUM1Y0d1OVNsUVkzeFlPU21ydVVFSVVkOVFxVjlEdE03Q3kyNGRHcm5Jb0s3a3JkTDlOdVVBa3NiY0RrMEdTSUYxZm5lWGd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Mjc4MDQwCWZpbGU6QWdlbnQgQmV0YS5hcHAudGFyLmd6Cnp5TUxTOFZVZDZic3ZURFNWQU9CRlBLMlozdlJWNCtiOExKRDdtbjNkZitUZnNLakFrblhiSEh3ZE8xcWNJNlZudDJzMVdBZ0g0NjFlNnBKZUV2NkFRPT0K",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.11/Agent-Beta.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3p6UHdYUjZJcnBXdzNwRjVSRkZCbUw5NXl0bDI2Q01PY1FYditRQTdDS2ZDYzI2U2Z0b3NEV2ZodjZzWFZZNjM0VU5pN251Q3graGFCdjR1dTZsU3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Njk3OTU0CWZpbGU6QWdlbnQgQmV0YS5hcHAudGFyLmd6CkR5RDhUSW5VczdXTU5iZC9jWGthSHJSa2Q5UXNuZE1KakdOZE95SGRqMmkzeDlrRmJ0Qk0zWjlabVVrTVU0dWM2K2JLMUdWMkZqL1ZaVUZSbUsxaEJ3PT0K",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.12/Agent-Beta.app.tar.gz"
     },
     "windows-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0RzlaUTZ5OXNScDhBN3l3eTN6YXZoaDlXKzM5ejVuVkc3WW1iSUJsejVadHZvKzVyR2VXVTRGZXp4NU5SS2hvb3VUSHc3ejdpQmdUb2p4TXdXajlMNVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjQ1NTcyCWZpbGU6QWdlbnQgQmV0YV8wLjcuMC1iZXRhLjExX2FybTY0LXNldHVwLmV4ZQprUm4yQk0weFdmOXhxK2VyM3hUZ2c1UFNIclhEZnE5ajVzRTFrakpuSkVjK1p2cTFYV01ZVHZFRlNQbnhxRkdveTZISlQvYW52M2ZqZ1Y1ZkNJOW9CZz09Cg==",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.11/Agent-Beta_0.7.0-beta.11_arm64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0RzkxM1VvY3lmVTVDMEJmOU80TmNhN2JSN3ZrNXA2L2hFbWM3YlNMam01VVFYQTdiWmhSMXdiczRNcEtEVitqUExweEN6cmM3aVk1cE5BR3Z2QTQycFFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Njk4NzExCWZpbGU6QWdlbnQgQmV0YV8wLjcuMC1iZXRhLjEyX2FybTY0LXNldHVwLmV4ZQpMdkUwK3Uya3lYaEZEYVhabmZZQnpuemJhU0lmeEdvTmgrRDVVSEdBUlk4WWxXSW9pZjFjdElEZzFrWVR1Zm5OaThLMUhjdkdYMVgzUVVnVmcyL0VCQT09Cg==",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.12/Agent-Beta_0.7.0-beta.12_arm64-setup.exe"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0RzZBL1F3eDBFYmFIOCtGZVNKUklKMUZ2L3JkcXR5UzVzVEFQS25YRHZXdzg1WUtYekxxdzVRTDg2Rk9yeU1ray9hR2FlQU1IYkw1R0IzRUFJTEszalFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjQ1NTIyCWZpbGU6QWdlbnQgQmV0YV8wLjcuMC1iZXRhLjExX3g2NC1zZXR1cC5leGUKQ1FrRDJ0T1RpcmhJcUtsRWNyRFh5QUlKZWQzeXVHU280REtKUFMwSThQNHI1QndSNTZsWUVXSTRSL3lyUlBvdGZWakQvWXFLRVdhWHh3YXR0TzJVREE9PQo=",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.11/Agent-Beta_0.7.0-beta.11_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0RzJGem0yeFFTbjJYMDFtdUpUZmE5RzdwUmk1emlXQVBseTNWT0V5NFFKZVZPUGNBbW14TU90OHU3bStNcVFkNkxnbmR6T0xoQkQ4RkNvOXczUzRHbHdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Njk4NjY2CWZpbGU6QWdlbnQgQmV0YV8wLjcuMC1iZXRhLjEyX3g2NC1zZXR1cC5leGUKbjZrZXhiTThxM2crMUxWeGVFY2hBV1VDTzVhd3ZqTTdWYkJnWUpsV0hHWk5WaHFHTmpNTk5sRGVZS0N0YmJ3RXBETXdmVHMzKzF1WDlKRkRzaTdqQ1E9PQo=",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.12/Agent-Beta_0.7.0-beta.12_x64-setup.exe"
     }
   }
 }
