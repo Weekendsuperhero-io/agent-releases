@@ -34,6 +34,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Connection warnings** — displays clear "Unreachable" and "Needs re-authorization" alerts when integrations disconnect or lose access.
+
+### Changed
+
+- **Selection styling** — updates the active selection highlight to use a consistent, unified glow across the app.
+
+### Fixed
+
+- **Tool counts** — displays accurate tool totals by properly deduplicating shared tools when multiple tags are selected.
+
+### Added
+
 - **Mobile skills** — introduces a right-edge slide-over panel on iOS for managing skills with full drag-and-drop support.
 
 ### Changed
