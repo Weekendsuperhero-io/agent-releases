@@ -34,6 +34,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Widget permissions** — introduces explicit consent prompts and a new settings interface to manage camera and microphone access.
+
+### Changed
+
+- **App name** — updates the application name to Agent Muse across all interfaces.
+
+### Added
+
 - **Connection warnings** — displays clear "Unreachable" and "Needs re-authorization" alerts when integrations disconnect or lose access.
 
 ### Changed
