@@ -34,6 +34,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Mermaid diagrams in chat** — fenced `mermaid` code blocks in agent messages now render as live diagrams instead of plain code.
 - **Widget permissions** — introduces explicit consent prompts and a new settings interface to manage camera and microphone access.
 
 ### Changed
