@@ -1,23 +1,23 @@
 {
-  "version": "0.7.0-beta.16",
-  "notes": "Release v0.7.0-beta.16",
-  "pub_date": "2026-08-05T18:50:12Z",
+  "version": "0.7.0-beta.17",
+  "notes": "Release v0.7.0-beta.17",
+  "pub_date": "2026-08-07T01:02:01Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3kzWi9rRGErckVid1l0bVBTRXQyR0V1UVhFQ2xTdmJaNE1GanliVnMyOGpuaFBMMjBBd2N4Z0VSMWFpaExlM2RZT1ZjMzNOaDExT1V3dXBySk5waGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1OTU1MDIzCWZpbGU6QWdlbnQgTXVzZSBCZXRhLmFwcC50YXIuZ3oKTUY1UUkrYVV6WVM0WWY5b0RMTzc3M3VZRE9jYlYrR2FpS1VjbTZHM2hnQnBxc1RGUHRuL25uWEdhSUNpci92NmhYWEN3U25YR0ltaXdmYjlNZVRoQVE9PQo=",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.16/Agent-Muse-Beta.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3dod0psVURyRlpoQ2FkZ3VTWjFkNlZyUldtZ0xxUHRSM3dQZ2hHaElDVUpSMmpkM2dVLzA3Znlla3JySFlhNis4U2p5ZlE5dUJldnBwZkNJblR4RUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MDYzNjg0CWZpbGU6QWdlbnQgTXVzZSBCZXRhLmFwcC50YXIuZ3oKZCt5V1hSV05TZEtCbWlSL3dMRkJzS3FsOEREd29UU2RuMU5ZZFRwNVYreGEreHBHbWtyaUIvQmdCbm53dFdGRXEzODRrYmNiOEpoRmFPNi9sZWFNQWc9PQo=",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.17/Agent-Muse-Beta.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3kzWi9rRGErckVid1l0bVBTRXQyR0V1UVhFQ2xTdmJaNE1GanliVnMyOGpuaFBMMjBBd2N4Z0VSMWFpaExlM2RZT1ZjMzNOaDExT1V3dXBySk5waGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1OTU1MDIzCWZpbGU6QWdlbnQgTXVzZSBCZXRhLmFwcC50YXIuZ3oKTUY1UUkrYVV6WVM0WWY5b0RMTzc3M3VZRE9jYlYrR2FpS1VjbTZHM2hnQnBxc1RGUHRuL25uWEdhSUNpci92NmhYWEN3U25YR0ltaXdmYjlNZVRoQVE9PQo=",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.16/Agent-Muse-Beta.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3dod0psVURyRlpoQ2FkZ3VTWjFkNlZyUldtZ0xxUHRSM3dQZ2hHaElDVUpSMmpkM2dVLzA3Znlla3JySFlhNis4U2p5ZlE5dUJldnBwZkNJblR4RUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MDYzNjg0CWZpbGU6QWdlbnQgTXVzZSBCZXRhLmFwcC50YXIuZ3oKZCt5V1hSV05TZEtCbWlSL3dMRkJzS3FsOEREd29UU2RuMU5ZZFRwNVYreGEreHBHbWtyaUIvQmdCbm53dFdGRXEzODRrYmNiOEpoRmFPNi9sZWFNQWc9PQo=",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.17/Agent-Muse-Beta.app.tar.gz"
     },
     "windows-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0RzUvWUpwNXVvMjNzYUR0eEc3bTQ4K2xKOEN1RlRZa0JtUDVlWExwUFZhNlBZdlhNSG5HY3UyOVpOY283RFlIVE9wOGEvRW9rMVlRMDZLVWs0ZDR3Y2dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1OTU1NzIzCWZpbGU6QWdlbnQgTXVzZSBCZXRhXzAuNy4wLWJldGEuMTZfYXJtNjQtc2V0dXAuZXhlCmVhYmFJSVJ4U213QTVqR1AwOFZmTVZEV1lPbnUyNzRqRFFtTWdsVmwrQmJDMW9xVGNGbldoelc1WkJzcnY1ZXd5RkIzOUpOY2lpdG9tTzZXZkovVkF3PT0K",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.16/Agent-Muse-Beta_0.7.0-beta.16_arm64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0Rzk0UWVrWVRrWFRpcnN3Mm1Ec2pyckFNWTZiV3I5MHViLzNwd3VRa0tjRjRWRVhXYld4Rjc1QlRiWXI4UEJrUlo4L29aaDRxdUZOWWZhS2JKcmFkaFFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MDY0NDc3CWZpbGU6QWdlbnQgTXVzZSBCZXRhXzAuNy4wLWJldGEuMTdfYXJtNjQtc2V0dXAuZXhlCklNUWRjeDdqMVlPUmg3L0ozdjRBWDhFTzJqUnQvWmEvQWxqa21YUWJnUTJrMWFLMDdwVWlsU0pZNTFLYUpnd0h5T3Rta2NkOWhraEd6QnJUd3UycUJnPT0K",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.17/Agent-Muse-Beta_0.7.0-beta.17_arm64-setup.exe"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0R3hOQmRZeTgwejdBd0xSMUVvbkdzTWhFSkRKQ2MrMzBSQWJyUnhQYlBrUHplUk03SGJqKzhCb0p6UFF2bXlyNnlTckhPVXZXMUFjRXU0SU96YWJ4UndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1OTU1NjU2CWZpbGU6QWdlbnQgTXVzZSBCZXRhXzAuNy4wLWJldGEuMTZfeDY0LXNldHVwLmV4ZQo3ZDZJU1dkWmZmakx1dHVUSnhYUVBHbEI4UGpMcHg3QkJiSFFSaXoxcVBtL0gxclRibFl0SVVKWGpuTlRwNWFJbTZMQ21Ebld1U1RDa1FLNXBoYVhDZz09Cg==",
-      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.16/Agent-Muse-Beta_0.7.0-beta.16_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUemxVMFVqZXh0RzZnS2JEZ2dNQXZKVmJjRkZ2WkJwcmZjQnVGcjdZUDZmcGdFZUw3ellLNFpnVituQWgrZjRoM3VLaHRmT3liVk1id3dyb2cvZ2JKSllyZ3VRTkpPc1E0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MDY0Mzk1CWZpbGU6QWdlbnQgTXVzZSBCZXRhXzAuNy4wLWJldGEuMTdfeDY0LXNldHVwLmV4ZQpZQ2RlVDBHTk1jSzIwM2hpaWZDSlhuTVQ4aGM0UFlEcHBTTWpWVFNycVJzZnFuWDM5a1diUHN5eVFQckh6MkNNRlZWRnV0MDh2VGNYMEpBcWx1MVRDdz09Cg==",
+      "url": "https://github.com/WeekendSuperhero-io/agent-releases/releases/download/v0.7.0-beta.17/Agent-Muse-Beta_0.7.0-beta.17_x64-setup.exe"
     }
   }
 }
