@@ -32,8 +32,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Fixed
+
+- **Phone reconnects on its own** — the iOS app now recovers automatically when its private link gets stuck after the phone sat idle, instead of needing to be force-quit and reopened. The "Try again" button on the connection card also performs a full link reset immediately.
+- **Quieter error log** — the harmless "ResizeObserver loop" browser notice no longer floods the app's error log several times a second, and the tab bar's fit-to-width measuring no longer triggers it.
+
 ### Added
 
+- **Browse conversations offline** — the iOS app shows your cached conversations even when the desktop can't be reached.
+- **Quieter desktop discovery** — the iOS app stops repeatedly probing tailnet devices that can't be desktops, pauses scanning while its own link is down, and backs off devices that keep not answering.
+- **Tailscale version in Settings** — both the desktop's Private link card and the iPhone's Connection screen now show the running Tailscale version, and the phone's Advanced screen keeps a copyable connection log for troubleshooting.
+- **One-step tailnet provisioning** — saving a Tailscale credential now restarts the private link automatically, so automatic networking applies immediately with no manual off/on toggle.
+- **Far From Home readiness checklist** — the Private link card now shows each provisioning step (MagicDNS, HTTPS, policy, service, tagged key) with a check and a plain-language reason when one fails, plus live rows for whether the node is tagged and the stable address is serving.
+- **Desktop network identity encrypted at rest** — the private link's on-disk Tailscale identity is now sealed with a key kept in the OS keychain (existing installs migrate automatically and safely), a new readiness row shows it, and the device reports it to the tailnet so access policy can require encrypted desktops.
+- **One paste finishes Far From Home setup** — paste a 1-day Tailscale API key once: the app mints its own narrowly-scoped credential, tags this machine in place (no sign-out or reconnect needed), and then revokes the pasted key in Tailscale for you. Nothing long-lived to clean up, and the Settings guidance now recommends the 1-day expiry.
+- **Network details on the Private link card** — a new collapsible section shows this desktop's Tailscale IPv4/IPv6, short and full domain (each with its own copy button), a ready-to-use `https://` URL, and the three connection paths a phone can arrive by: Direct (the dialable endpoints), Peer relay, and DERP — with a plain-language note that https works with the full domain because that's the name the certificate is issued for.
 - **Mermaid diagrams in chat** — fenced `mermaid` code blocks in agent messages now render as live diagrams instead of plain code.
 - **Widget permissions** — introduces explicit consent prompts and a new settings interface to manage camera and microphone access.
 
