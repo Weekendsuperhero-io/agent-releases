@@ -34,6 +34,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Fixed
 
+- **Session recovery** — reconnects to active agent sessions smoothly without launching duplicate background processes, and ensures available slash commands are preserved.
+- **Integration credentials** — saves configuration changes reliably without overwriting previously stored OAuth data.
+
+### Fixed
+
 - **Phone reconnects on its own** — the iOS app now recovers automatically when its private link gets stuck after the phone sat idle, instead of needing to be force-quit and reopened. The "Try again" button on the connection card also performs a full link reset immediately.
 - **Quieter error log** — the harmless "ResizeObserver loop" browser notice no longer floods the app's error log several times a second, and the tab bar's fit-to-width measuring no longer triggers it.
 
