@@ -34,6 +34,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Fixed
 
+- **Windows app loading** — fixes an issue that could prevent the app from loading or navigating correctly on Windows.
+
+### Fixed
+
 - **Session recovery** — reconnects to active agent sessions smoothly without launching duplicate background processes, and ensures available slash commands are preserved.
 - **Integration credentials** — saves configuration changes reliably without overwriting previously stored OAuth data.
 
