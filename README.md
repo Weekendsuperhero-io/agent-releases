@@ -32,6 +32,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Added
+
+- **Marketplaces** — introduces a new tab to browse and manage all external catalogs and built-in servers in one place.
+- **Tool permissions** — adds a nutrition label to the session setup and context shelf, making it easy to see exactly which tools an agent can access.
+- **Skill previews** — introduces an interactive dialog for viewing skills, allowing you to read multiple documents, follow links, and navigate back through your history.
+
+### Fixed
+
+- **File reading** — automatically skips unnecessary permission prompts by preventing text reads of binary files outside the sandbox.
+- **Token usage** — ensures accurate usage counts are displayed for agents that report their metrics in non-standard formats.
+
 ### Fixed
 
 - **Windows app loading** — fixes an issue that could prevent the app from loading or navigating correctly on Windows.
