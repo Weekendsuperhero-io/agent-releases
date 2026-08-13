@@ -32,6 +32,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Fixed
+
+- **Windows app loading** — resolves an issue where the app could freeze during startup.
+- **Sign-in** — preserves your login session if the initial connection fails.
+- **Connection status** — displays accurate network states while loading and preserves exact error messages if setup stops unexpectedly.
+
 ### Added
 
 - **Marketplaces** — introduces a new tab to browse and manage all external catalogs and built-in servers in one place.
