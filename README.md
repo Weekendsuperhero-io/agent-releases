@@ -32,6 +32,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Added
+
+- **Agent prompts** — supports multi-select options and toggle switches when agents ask for your input.
+
+### Fixed
+
+- **Developer tools** — prevents the Inspector from freezing when viewing extremely large data payloads.
+- **Performance** — speeds up the sidebar loading time for agent sessions and usage metrics.
+- **Connection tags** — ensures accurate tags are displayed when reconnecting to an agent, preventing stale information from appearing.
+
+### Security
+
+- **Activity logs** — automatically redacts registered sensitive credentials from your local history logs.
+
 ### Fixed
 
 - **Windows app loading** — resolves an issue where the app could freeze during startup.
