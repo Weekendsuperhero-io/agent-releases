@@ -34,6 +34,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Toolchains** — introduces a dedicated settings pane to inspect managed toolchains, displaying installation timestamps, update checks, and recent failure reasons.
+
+### Changed
+
+- **Plugin installation** — presents a consistent list of components before and after consent.
+- **Skill tree** — groups a plugin's skills into a unified folder sorted alongside directories.
+- **Command inputs** — allows safely pasting full shell commands, automatically extracting the executable and properly quoting arguments.
+- **Environment previews** — explicitly states the origin of the spawned toolchain binary.
+
+### Fixed
+
+- **Marketplaces** — improves stability when browsing catalogs by better handling network rate limits and caching.
+
+### Added
+
 - **Agent prompts** — supports multi-select options and toggle switches when agents ask for your input.
 
 ### Fixed
