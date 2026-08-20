@@ -34,6 +34,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Server settings** — displays a health warning on tool groups when a server is disconnected.
+
+### Changed
+
+- **Permissions** — removes redundant consent dialogs for individual widgets in favor of connection-level visibility rules.
+- **Developer tools** — displays images directly in the wire log instead of showing unreadable text strings.
+
+### Fixed
+
+- **Widgets** — preserves the state of form submissions even if the application is restarted or the view changes.
+- **Icons** — ensures custom icon choices are correctly saved and rendered instead of reverting to defaults.
+- **Search** — resolves an issue that caused the application to crash when navigating certain search results.
+- **Widget forms** — displays an accurate "Form shown" status on tool bubbles rather than incorrectly showing a failure state.
+- **Diagnostic overlays** — prevents spurious error messages from appearing by correctly handling background requests.
+
+### Added
+
 - **Toolchains** — introduces a dedicated settings pane to inspect managed toolchains, displaying installation timestamps, update checks, and recent failure reasons.
 
 ### Changed
