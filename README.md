@@ -34,6 +34,35 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Document configuration** — introduces a visual frontmatter editor to modify YAML metadata without manual coding.
+- **Plugin updates** — introduces update detection, one-click updates, and an "Update All" capability for installed plugins and tool servers.
+
+### Changed
+
+- **Performance** — reduces memory usage and application startup time via paged transcripts and process sweeps.
+- **Plugin discovery** — rebuilds the browsing experience for skills, plugins, and tools with visual cards, ranked search, category chips, and trust summary badges.
+- **Theme** — refines visual aesthetics including aurora and starfield effects, improves contrast on transparent elements, and splits gloss lightness into distinct light and dark mode settings.
+- **Library documents** — optimizes context limits by linking documents as short teasers rather than embedding full text in every turn.
+- **Plugin management** — upgrades installed plugin lists to use striped, fixed-header tables and standardizes plugin icons.
+- **Detail cards** — unifies the visual language and layout of information cards across the application.
+- **Tool servers** — displays built-in tool servers in the main servers table and adds bulk update actions.
+
+### Fixed
+
+- **Markdown links** — preserves local file links to remain clickable instead of being silently removed.
+- **File parsing** — resolves cross-platform parsing issues for file paths, ensuring reliable handling of Windows drive letters and special characters.
+- **Background processes** — prevents background processes from leaking after closing the application and properly cleans up unexpectedly closed sessions.
+- **Updates** — resolves an issue where application updates could fail during network interruptions by adding automatic retries.
+- **Settings** — prevents application settings from being lost or dropped across restarts.
+- **Typography** — fixes clipped text edges and incorrect font weights on page headers.
+
+### Security
+
+- **Network paths** — mitigates a potential credential leak on Windows by rejecting remote network paths for file operations.
+- **File operations** — hardens image saving to prevent arbitrary file read vulnerabilities.
+
+### Added
+
 - **Server settings** — displays a health warning on tool groups when a server is disconnected.
 
 ### Changed
