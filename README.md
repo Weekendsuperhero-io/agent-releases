@@ -34,6 +34,22 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **File reading** — restores a built-in tool for reading local files and resources.
+
+### Changed
+
+- **Sandbox permissions** — prompts for confirmation before allowing out-of-sandbox file writes or terminal directory changes.
+
+### Fixed
+
+- **Chat rendering** — displays attached files correctly on user messages, preserves single newlines in text, prevents display issues from out-of-order text streaming, and fixes delayed widgets.
+
+### Security
+
+- **Resource links** — enforces sandbox capability rules before opening external URLs or local files.
+
+### Added
+
 - **Document configuration** — introduces a visual frontmatter editor to modify YAML metadata without manual coding.
 - **Plugin updates** — introduces update detection, one-click updates, and an "Update All" capability for installed plugins and tool servers.
 
@@ -46,6 +62,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 - **Plugin management** — upgrades installed plugin lists to use striped, fixed-header tables and standardizes plugin icons.
 - **Detail cards** — unifies the visual language and layout of information cards across the application.
 - **Tool servers** — displays built-in tool servers in the main servers table and adds bulk update actions.
+- **Windows install (one-time)** — each release channel now runs under its own executable name. Because Windows stores some browser-backed interface data next to that executable, this upgrade clears your open tabs and a few interface preferences once, per channel. Your settings, sessions, and credentials are stored separately and are not affected.
 
 ### Fixed
 
@@ -55,6 +72,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 - **Updates** — resolves an issue where application updates could fail during network interruptions by adding automatic retries.
 - **Settings** — prevents application settings from being lost or dropped across restarts.
 - **Typography** — fixes clipped text edges and incorrect font weights on page headers.
+- **Windows channels** — installing or updating one channel no longer closes the others. Every channel shipped the same executable name, so the installer's "close the running app" step matched all of them — silently during a background update — and could leave the new install incomplete.
 
 ### Security
 
