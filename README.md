@@ -34,6 +34,22 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Context shelf** — introduces a mobile UI for managing Library documents and skills.
+
+### Changed
+
+- **Message actions** — consolidates copy actions to a single button per response.
+- **Mobile interface** — refines floating cards on iOS with polished corners, adjusted margins, and pinstripe borders.
+- **Navigation** — replaces the overflow session menu with a hold-to-close action on the toolbar icon.
+- **Session presence** — synchronizes active session status reliably across desktop and mobile devices.
+
+### Fixed
+
+- **Chat rendering** — prevents internal sub-session traffic from appearing as user messages in the transcript.
+- **Connectivity** — prevents the mobile app from disconnecting every 60 seconds.
+
+### Added
+
 - **File reading** — restores a built-in tool for reading local files and resources.
 
 ### Changed
