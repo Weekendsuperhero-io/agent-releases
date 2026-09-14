@@ -32,6 +32,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Changed
+
+- **JSON viewer** — formats raw data arrays more compactly to improve readability.
+- **Performance** — drastically reduces CPU and system resource usage when streaming chat responses and rendering animations.
+- **Startup** — speeds up the initial application launch sequence.
+
+### Fixed
+
+- **Background stability** — improves application reliability when running in the background.
+
 ### Added
 
 - **Context shelf** — introduces a mobile UI for managing Library documents and skills.
