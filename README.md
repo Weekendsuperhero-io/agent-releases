@@ -34,6 +34,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Changed
 
+- **Notifications** — replaces toast popups with inline alerts and an Activity Center.
+- **Server editor** — keeps drafts open after their first save.
+
+### Fixed
+
+- **App stability** — prevents application deadlocks when fetching the server catalog.
+- **Connections** — automatically detects and repairs unresponsive server connections.
+- **Interface** — prevents the search backdrop from dismissing accidentally when dragging text.
+- **MCP updates** — ensures update checks reliably identify installed servers.
+
+### Changed
+
 - **JSON viewer** — formats raw data arrays more compactly to improve readability.
 - **Performance** — drastically reduces CPU and system resource usage when streaming chat responses and rendering animations.
 - **Startup** — speeds up the initial application launch sequence.
