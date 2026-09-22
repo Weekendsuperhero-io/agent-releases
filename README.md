@@ -32,6 +32,25 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ## [Unreleased]
 
+### Added
+
+- **Plugin details** — displays plugin identity information directly on the detail card.
+- **Session inspector** — introduces content search, faceted filtering, and the ability to export transcripts.
+
+### Changed
+
+- **Plugin catalog** — speeds up browsing by caching search results.
+- **Session inspector** — improves readability by formatting long JSON strings across multiple lines.
+
+### Fixed
+
+- **Authentication** — ensures reliable sign-in flows by fixing redirect mismatches.
+- **Interface** — corrects the visibility of empty states and updates the color of search chips.
+- **Nutrition cards** — fixes layout issues by wrapping titles, hiding scrollbars, and properly rendering instructions.
+- **Plugin updates** — ensures accurate update availability by correctly comparing pre-release versions.
+- **Sessions** — eliminates a 10-second delay when starting a session with a custom configuration.
+- **Skills** — resolves an issue where commands stored in nested directories were missing.
+
 ### Changed
 
 - **Notifications** — replaces toast popups with inline alerts and an Activity Center.
