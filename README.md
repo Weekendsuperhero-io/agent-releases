@@ -34,6 +34,35 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Playlists** — replace Tool Groups: a playlist is a named set of servers, tools, surfaces, plugins, skills and documents, edited in Bridge → Playlists; a Muse, a subagent or a session picks playlists, and an edit reaches every open session that picked it.
+- **Plugins in scope** — a plugin is picked whole, and each of its parts (a server, a skill, a document, a subagent, a hook, its commands) can be switched off for a Muse, a subagent or a session.
+- **One scope selector** — the setup view, the Muse editor, the subagent editor and the Context shelf share one picker for playlists, plugins, the tool scope, skills, documents, subagents and hooks.
+- **MCP Bundle signatures** — a bundle's signature is verified on install (`signed`, `untrusted-signature`, `invalid-signature`), and an installed bundle wears a seal naming who signed it.
+- **Bridge Status** — the Status card counts what each server has, with totals in the header.
+
+### Changed
+
+- **Tool Groups became playlists** — each Tool Group became a playlist of its name; a group that covered every tool of a server now follows the server, including tools it adds later. Grouped Muses, subagents and sessions are "Picked tools" with those playlists; None is Picked with nothing.
+- **Skills** — update and audit state is saved; installs from skills.sh and GitHub are rate-gated and never destroy a local edit without asking.
+- **Plugin updates** — decided in lanes (pin, version, content) and saved; a check waits for a running one instead of answering with stale rows.
+- **Composer updates** — only a strictly newer version from the composer's own marketplace counts as an update.
+- **Playlist saves** — answer at once; the open sessions that picked the playlist take the edit on its own task.
+- **Browsers** — the skills, plugins, tools and composer browsers show every match; the 200-card cap is gone.
+
+### Fixed
+
+- **Sessions** — a reopened session keeps the tools it had; a session whose scope or guards cannot be read refuses to start and says why, instead of starting wider than it was set; a scope change that fails leaves the session and its saved scope as they were, and says so on the Context shelf.
+- **Governance** — a refresh that cannot read a plugin's parts keeps every session's previous policy, instead of re-enabling switched-off servers and dropping plugin admissions; a session a governance change left on its previous policy is named in the activity log, with a way to apply the change again.
+- **Sign-in** — a remote server's sign-in reconnects the server it was for without a restart, and a signed-in server says so; a sign-in the server rejects shows on the Tools table with a way to fix it; a refused sign-in ends the editor's wait with the reason, and the browser tab says how it ended; sign-ins to one or several servers share the callback port, and a callback carrying a state no sign-in sent is refused.
+- **Skills** — a replaced skill is never removed before its replacement is in place; an adopted CLI skill asks before writing over a folder no install recorded.
+- **Plugin updates** — a check that straddles an install no longer resurrects the pre-install verdict.
+
+### Security
+
+- **GitHub token** — `GITHUB_TOKEN` (or `GH_TOKEN`) is sent only to the GitHub API, never to skills.sh, the audit service, the raw host or a URL override.
+
+### Added
+
 - **Plugin details** — displays plugin identity information directly on the detail card.
 - **Session inspector** — introduces content search, faceted filtering, and the ability to export transcripts.
 
