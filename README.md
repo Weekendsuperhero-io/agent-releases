@@ -34,6 +34,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Mobile history** — prompts sent from the phone include the history page's context.
+- **Mobile attachments** — files sent from the phone reach the agent in the best format it supports.
+
+### Changed
+
+- **File encoding** — text files edited by the agent keep their original encoding.
+
+### Fixed
+
+- **Mobile connection** — the phone app detects network changes in one second instead of fifteen.
+- **Image visibility** — an image the agent cannot view appears as a clickable file link rather than unreadable data.
+- **Mobile attachments** — phone uploads save correctly to the session folder without hanging.
+
+### Added
+
 - **Playlists** — replace Tool Groups: a playlist is a named set of servers, tools, surfaces, plugins, skills and documents, edited in Bridge → Playlists; a Muse, a subagent or a session picks playlists, and an edit reaches every open session that picked it.
 - **Plugins in scope** — a plugin is picked whole, and each of its parts (a server, a skill, a document, a subagent, a hook, its commands) can be switched off for a Muse, a subagent or a session.
 - **One scope selector** — the setup view, the Muse editor, the subagent editor and the Context shelf share one picker for playlists, plugins, the tool scope, skills, documents, subagents and hooks.
