@@ -34,6 +34,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Mermaid diagrams** — displays generated Mermaid diagrams.
+- **Site skills** — enables the agent to use site-specific skills.
+
+### Changed
+
+- **Desktop interface** — cleans up the desktop application interface.
+
+### Added
+
 - **Mobile history** — prompts sent from the phone include the history page's context.
 - **Mobile attachments** — files sent from the phone reach the agent in the best format it supports.
 
