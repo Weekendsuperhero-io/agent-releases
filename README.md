@@ -45,6 +45,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 - **Mobile history** — prompts sent from the phone include the history page's context.
 - **Mobile attachments** — files sent from the phone reach the agent in the best format it supports.
+- **Newer MCP protocol for agents, by choice** — Settings → Network → Bridge can offer new chats MCP 2026-07-28 as well as 2025-11-25. Agents that support the newer revision use it; the rest connect as before. A chat keeps the choice it started with.
+- **Newer MCP protocol for servers** — an MCP server that supports MCP 2026-07-28 is opened with it, unless it could not send its updates that way; every other server connects with 2025-11-25 as before. What each server negotiated is remembered and shown in its settings, where the Protocol menu can pin either revision or probe the server again.
+- **Long tool calls as tasks** — an agent that supports MCP tasks gets a task for a tool call still running after two seconds, so its own timeout no longer cuts the call short. When a server answers a call with a task of its own, the app follows it to the result for every agent.
+- **Reorder from the keyboard** — Composers and the PATH editor's paths can be reordered without a mouse: focus one, press Space to pick it up, move it with the arrow keys, and press Space to drop it. Escape puts it back.
+- **Calendars and reminders as resources** — the Calendar & Reminders built-in (formerly EventKit) now offers your calendars, upcoming events, reminder lists and open reminders as resources as well as tools, so they can be attached as context and kept for a minute without asking again. An agent that subscribes to one is told the moment it changes, whether the change was made in Calendar, in Reminders, on another device or by an agent. It never asks for calendar access just to list or watch them.
+- **Reset to theme default** — Settings → Display → Glass color has a Reset to theme default button. Every glass dial and toggle goes back to your theme's own: hue, chroma, Lightness by day and by night, opacity, diffusion, stain, accent, outline and gloss. Your theme, glass style and wallpaper stay as they are.
 
 ### Changed
 
@@ -52,9 +58,47 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Fixed
 
+- **Agents installing JavaScript packages** — when an agent runs `bun install` in your project, the packages land in the project's own `node_modules`, the way your terminal installs them, so the agent's type checks match yours. A project already installed this way by an agent needs one fresh `bun install`.
+- **Long tool names** — a tool name that would pass 128 characters with an agent's own prefix is shortened (its server's prefix gives way first, the tool's own words stay). No current tool is that long, so no name changes. Antigravity allows only 64, so it leaves out the rare longer tool: today one, `LitigationLegalCourtlistenerUnsubscribeFromDocketAlert`.
+- **Database size** — what MCP servers send over and over (their lists of tools, prompts and resources, and their handshakes) is stored once instead of with every request that saw it. On a profile measured before the change that freed about 700 MB. The first launch after updating spends a few seconds converting the existing history; Settings → Reclaim space returns the freed space to the disk.
+- **Faster reads** — opening a chat, loading its earlier messages and the Wire panel read the database faster: a page of a chat in 13–22% less time, the Wire panel's list in about a third of it. Reads that overlap, such as one chat loading while another streams, slow each other down far less.
+
+### Fixed
+
+- **Server updates after a reconnect** — an agent whose connection to an MCP server reconnected could stop hearing that the server's tools or resources had changed, once the old connection was cleaned up. Each connection now keeps its own updates.
+- **Questions from a restarted server** — when an MCP server restarts while its question is open in the app, the question closes, instead of staying up with nowhere for the answer to go.
+- **MCP server status** — a server that refuses a request with an error of its own, or cannot finish one (it keeps asking for input, or cancels its own long-running task), no longer turns its status card red. The connection was fine; the agent now gets the server's own error, or what the server did, instead of "backend connection failed".
+- **MCP server errors** — when a server that connected before fails to start (a setting it needs is missing, say), its status and Test connection show the server's own error, not "no compatible protocol version" from the retry that followed.
+- **Restarting a session** — sends the system prompt chosen for it at setup. It could relaunch with an earlier choice.
+- **A message that fails to draw** — shows an error card in its place instead of breaking the whole conversation.
+- **Artifacts** — Download works for every kind of file, not just images, and the gallery asks for each image's preview once instead of again every time one arrives.
+- **Switching items** — the details of a plugin, a policy, an environment or a wire-log class, a project's extra folders and an agent's providers no longer show the previous item's while the new one loads.
+- **Phone pairing** — a pairing request that runs out of time is declined once; it could be declined twice.
+- **Scene wallpapers** — dune, aurora, clouds and forest no longer slow the window down. Each drew dozens of separate layers that were redrawn whenever anything on screen changed; they now draw as a handful, and an animated dune takes about a third of the graphics time it did. They look exactly the same.
+- **Scrolling and switching tabs** — no longer stall. A few style rules made the window re-check the styles of everything on screen whenever a tool, reasoning or permission card scrolled into view, and on every tab switch; tab switches are now about seven times faster.
+- **Global permissions** — a change in Settings → Permissions is saved as you make it. It was saved only when you switched Settings tabs, so leaving Settings any other way lost it, and switching tabs just after opening Settings could clear every permission set there.
+- **Composer, Muse and subagent permissions** — a permissions grid that could not load says so and stays locked, instead of letting a change replace everything that was saved.
+- **Calendar and Reminders prompts** — a Reminders prompt no longer opens a connection of its own to the calendar service, the path to the "too many event stores" refusal; prompts now share the one connection tool calls use.
+- **Server runtime** — the Runtime menu in an MCP server's settings shows the runtime you chose; it showed Automatic whatever was saved.
+- **Mail accounts** — editing a mail account reconnects only AgentMail; every other MCP server stays connected.
+- **MCP server keys and redirects** — when an MCP server redirects a request to another site, the API key configured for that server is no longer sent along. The redirect now shows as an error on the server instead.
+- **Signing in to MCP servers** — more servers can be signed in to: those that accept the app's credentials only in the form a server lists for them (HTTP Basic), those whose sign-in names their address slightly differently from the URL you added, and older servers (MCP 2025-03-26) that publish no sign-in details.
+- **Servers that want more access** — a server that connects without a sign-in but needs one for its tools now asks you to sign in, instead of showing as connected with no tools. When a server needs more access for a tool, re-authorizing asks for that access along with what you already had, instead of the same access again.
+- **Sign-in safety** — the app refuses a sign-in whose response comes from a different authorization server than the one it went to, and does not use sign-in details that name another server.
 - **Mobile connection** — the phone app detects network changes in one second instead of fifteen.
 - **Image visibility** — an image the agent cannot view appears as a clickable file link rather than unreadable data.
 - **Mobile attachments** — phone uploads save correctly to the session folder without hanging.
+- **Session names on the phone** — the phone shows each session by the name the desktop shows: your title, else the one the agent gave it, else its Muse's or agent's name. It showed the first message you sent instead. A rename on the desktop now reaches the phone right away, as does a session you start, delete or fetch there.
+- **Diagrams on the phone** — a diagram that ran out of time while drawing (the phone was busy, or the app was in the background) is drawn again when it comes back into view or the app returns, and its caption offers Try Again. It stayed as source until the app restarted.
+- **The Opaque style's sidebar** — the sidebar is opaque on the Opaque style: the wallpaper no longer shows through it, and at night it is the same colour as the bars at its top and bottom.
+- **The sidebar's bars by day** — the bars at the top and bottom of the sidebar, and the search fields' magnifier and the compact page header, which share their look, are what they are at night: the Lightness you set for night, and your theme's own night colours. Moonstone's were tan by day instead of its grey stone, and the jewel themes' lacked their night wash.
+- **The jewel themes at night** — Rose, Goldstone, Carnelian, Amber, Peridot, Aventurine, Turquoise, Aquamarine, Sapphire, Lapis, Amethyst and Tourmaline each have their own strength of colour at night, and now show it. They used their daytime strength at night: a quarter of their own for Lapis and Amethyst, and up to twice their own for Peridot, Aventurine, Turquoise and Aquamarine, which the themes hold back at night to keep text readable.
+- **Moonstone's gloss** — the crystal highlight on Moonstone is its own pale stone instead of the jewel themes' strong tint, which turned it amber at night. The Gloss tint dial shows the theme's own value until you set one.
+- **The Lightness dial's default** — with no Lightness set, the dial shows the value your theme actually uses (93% by day and 33% at night, Moonstone 95% and 49%). It showed 94% and 32%.
+- **Diagram errors sent to the agent** — a diagram that was still arriving when the reply finished is no longer reported to the agent as broken along with your next message.
+- **Calendar & Reminders results** — listing reminders and reminder lists, searching, and batch changes no longer fail in agents that check a tool's results against the shape it declares. A reminder or event with no alarms, repeats or attachments left out fields the tool said would always be there, and such an agent rejected the whole result.
+- **Calendar & Reminders guidance** — agents are told to look an event or reminder up before changing it instead of guessing its id, and to write titles and notes as plain text.
+- **Expired MCP sign-ins** — a server that turns down an expired or revoked sign-in with an error message in its reply now has the sign-in refreshed, or shows Re-authorize, instead of failing with an unclear error.
 
 ### Added
 
