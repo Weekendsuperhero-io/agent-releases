@@ -34,6 +34,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 
 ### Added
 
+- **Hardware encryption status** — displays whether the node identity is encrypted at rest in the Windows application.
+
+### Fixed
+
+- **Phone connection** — prevents a stalled secure connection handshake from blocking the listener and automatically serves renewed network certificates to maintain the connection.
+- **Windows background** — reveals the selected wallpaper behind the session canvas instead of hiding it behind a solid color.
+
+### Added
+
 - **Mermaid diagrams** — displays generated Mermaid diagrams.
 - **Site skills** — enables the agent to use site-specific skills.
 
