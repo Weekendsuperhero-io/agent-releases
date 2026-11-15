@@ -41,6 +41,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Ver
 - **Phone connection** — prevents a stalled secure connection handshake from blocking the listener and automatically serves renewed network certificates to maintain the connection.
 - **Windows background** — reveals the selected wallpaper behind the session canvas instead of hiding it behind a solid color.
 
+### Changed
+
+- **Default look** — a new install starts in the Synthwave theme: the synthwave scene in its own night-city glass. An existing install that never chose a scene or a glass moves to it on update; a chosen one stays.
+
 ### Added
 
 - **Mermaid diagrams** — displays generated Mermaid diagrams.
